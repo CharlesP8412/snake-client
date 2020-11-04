@@ -35,11 +35,17 @@ const handleUserInput = function () {
         case 'd':
           connection.write("Move: right");
           break;
+        case 'q':
+          connection.write("Say: Nom");
+          break;
+        case 'e':
+          connection.write("Say: Mmm");
+          break;
       }
     }
   })
 };
-  
+
 module.exports = {
   setupInput
 };
