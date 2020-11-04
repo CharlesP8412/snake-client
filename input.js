@@ -3,7 +3,7 @@
 let connection;
 
 /**
- * Setup User Interface 
+ * Setup User Interface
  * Specifically, so that we can handle user input via stdin
  */
 const setupInput = function (conn) {
@@ -15,7 +15,7 @@ const setupInput = function (conn) {
   //Function that handles inputs
   handleUserInput();
   return stdin;
-}
+};
 const handleUserInput = function () {
   process.stdin.on('data', (key) => {
     // \u0003 maps to ctrl+c input
@@ -43,7 +43,7 @@ const handleUserInput = function () {
           break;
       }
     }
-  })
+  });
 };
 
 module.exports = {
