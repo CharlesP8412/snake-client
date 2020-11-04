@@ -1,4 +1,4 @@
-
+const { keyMap } = require('./constants');
 // Stores the active TCP connection object.
 let connection;
 
@@ -23,16 +23,16 @@ const handleUserInput = function () {
       process.exit();
     } else {
       switch (key) {
-        case 'w':
+        case keyMap.MOVE_UP:
           connection.write("Move: up");
           break;
-        case 'a':
+        case keyMap.MOVE_LEFT:
           connection.write("Move: left");
           break;
-        case 's':
+        case keyMap.MOVE_DOWN:
           connection.write("Move: down");
           break;
-        case 'd':
+        case keyMap.MOVE_RIGHT:
           connection.write("Move: right");
           break;
         case 'q':
