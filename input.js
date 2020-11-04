@@ -1,16 +1,12 @@
-const connect = require('./client.js');
 
 const handleUserInput = function () {
-
-  process.stdin.on('data', (key) => {
+  stdin.on('data', (key) => {
     // \u0003 maps to ctrl+c input
     if (key === '\u0003') {
       process.exit();
     }
   })
 };
-
-
 
 
 /**
@@ -25,11 +21,9 @@ const setupInput = function () {
 
   //Function that handles inputs
   handleUserInput();
- 
+
+
   return stdin;
 }
 
-
-console.log('Connecting...');
-connect();
-setupInput();
+module.exports = handleUserInput;
