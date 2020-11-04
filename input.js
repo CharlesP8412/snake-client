@@ -35,10 +35,10 @@ const handleUserInput = function () {
         case keyMap.MOVE_RIGHT:
           connection.write("Move: right");
           break;
-        case 'q':
+        case keyMap.TAUNT1:
           connection.write("Say: Nom");
           break;
-        case 'e':
+        case keyMap.TAUNT2:
           connection.write("Say: Mmm");
           break;
       }
